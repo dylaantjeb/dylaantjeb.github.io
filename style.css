@@ -1,0 +1,91 @@
+@font-face { font-family: Asket Extended; src: url('Glen Jan - AsketExtended-Light.otf'); 
+ font-family: Asket Extended; font-weight: bold; src: url('Glen Jan - AsketExtended-Light.otf');
+}
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Asket Extended', sans-serif;
+    background-color: #E4E1CF;
+
+}
+
+header,footer{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.plane{
+    max-height: 100px; 
+    padding: 0;
+    top: 50%;
+    left: 10%;
+    position: relative;
+}
+
+.animation{
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+
+.grid {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: auto auto auto ;
+
+}
+
+.grid > div{
+    padding-left: 100px;
+    grid-row: 2;
+}
+
+
+.two {
+    grid-row: 2;
+    grid-column: 2;
+    color: black;
+}
+
+body{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    min-height: 100vh;
+    background: #E4E1CF;
+    overflow: hidden;
+}
+#text{
+
+    position: relative;
+    color: whitesmoke;
+    font-weight: 700;
+    font-size: 6em;
+    line-height: 0.9em;
+    letter-spacing: 2px;
+    text-align: center;
+    transform: rotate(-28deg) skew(25deg);
+}
+#text::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 30px;
+    left: -30px;
+    color: rgba(0, 0, 0, 0.3);
+    text-shadow: none;
+    filter: blur(8px);
+    z-index: -1;
+}
+#text:hover{
+    color: #f1f1f1;
+
+}
+
+
